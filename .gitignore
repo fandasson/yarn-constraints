@@ -1,0 +1,12 @@
+# IDE files
+.idea
+.DS_Store
+
+# Package manager files
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+!.yarn/cache

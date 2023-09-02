@@ -1,0 +1,14 @@
+{
+  "name": "yarn-constraints",
+  "version": "0.1.0",
+  "description": "Playground repository for Yarn constraints plugin",
+  "main": "index.js",
+  "repository": "git@github.com:/fandasson/yarn-constraints.git",
+  "author": "Frantisek Pac",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.0.0-rc.50"
+}
