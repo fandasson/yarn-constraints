@@ -1,0 +1,14 @@
+{
+  "name": "project-2",
+  "description": "Shared libs and components for webdev projects",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Frantisek PAc",
+  "repository": "https://github.com/fandasson/yarn-constraints.git",
+  "packageManager": "yarn@4.0.0-rc.50",
+  "dependencies": {
+    "react": "^16.14.0",
+    "yup": "^1.2.0"
+  }
+}
