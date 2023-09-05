@@ -1,4 +1,8 @@
-/**
+// @ts-check
+
+/** @type {import('@yarnpkg/types')} */
+const { defineConfig } = require('@yarnpkg/types');
+ /**
  * List of packages we require to be present in the package.json
  */
 const requiredWorkspacesFields = ["name", "version", "author", "license", "description"];
@@ -20,7 +24,7 @@ const allowedRanges = new Map([
     ["react", "^18"],
 ]);
 
-module.exports = {
+module.exports = defineConfig({
     async constraints(ctx) {
         validatePresenceOfRequiredFields(ctx, requiredWorkspacesFields);
         validatePresenceOfRequiredScripts(ctx, requiredScripts);
@@ -28,9 +32,7 @@ module.exports = {
         forbidDependencies(ctx, forbiddenDependencies)
         enforceDependencyRanges(ctx, allowedRanges);
     },
-};
-
-
+});
 
 function validatePresenceOfRequiredFields({Yarn}, requiredFields) {
     for (const workspace of Yarn.workspaces()) {
