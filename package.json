@@ -10,5 +10,8 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@4.0.0-rc.50"
+  "packageManager": "yarn@4.0.0-rc.50",
+  "dependencies": {
+    "@yarnpkg/types": "^4.0.0-rc.50"
+  }
 }
