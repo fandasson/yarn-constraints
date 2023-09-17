@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Frantisek PAc",
   "repository": "https://github.com/fandasson/yarn-constraints.git",
-  "packageManager": "yarn@4.0.0-rc.50",
+  "packageManager": "yarn@4.0.0-rc.51",
   "dependencies": {
     "react": "^16.14.0",
     "yup": "^1.2.0"

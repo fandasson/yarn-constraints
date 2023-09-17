@@ -63,6 +63,22 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lodash", [\
+      ["npm:1.3.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/lodash-npm-1.3.1-1451832054-10c0.zip/node_modules/lodash/",\
+        "packageDependencies": [\
+          ["lodash", "npm:1.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.4.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/lodash-npm-2.4.1-e7ac03b240-10c0.zip/node_modules/lodash/",\
+        "packageDependencies": [\
+          ["lodash", "npm:2.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["loose-envify", [\
       ["npm:1.4.0", {\
         "packageLocation": "../../../.yarn/berry/cache/loose-envify-npm-1.4.0-6307b72ccf-10c0.zip/node_modules/loose-envify/",\
@@ -86,7 +102,8 @@ const RAW_RUNTIME_STATE =
       ["workspace:packages/project-1", {\
         "packageLocation": "./packages/project-1/",\
         "packageDependencies": [\
-          ["project-1", "workspace:packages/project-1"]\
+          ["project-1", "workspace:packages/project-1"],\
+          ["lodash", "npm:1.3.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -96,6 +113,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/project-2/",\
         "packageDependencies": [\
           ["project-2", "workspace:packages/project-2"],\
+          ["lodash", "npm:2.4.1"],\
           ["react", "npm:16.14.0"],\
           ["yup", "npm:1.2.0"]\
         ],\
@@ -803,7 +821,8 @@ function opendir(fakeFs, path, entries, opts) {
     const filename = entries.shift();
     if (typeof filename === `undefined`)
       return null;
-    return Object.assign(fakeFs.statSync(fakeFs.pathUtils.join(path, filename)), {
+    const entryPath = fakeFs.pathUtils.join(path, filename);
+    return Object.assign(fakeFs.statSync(entryPath), {
       name: filename,
       path: void 0
     });
@@ -1619,12 +1638,24 @@ class NodeFS extends BasePortableFakeFS {
         this.realFs.opendir(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
       }
     }).then((dir) => {
-      return Object.defineProperty(dir, `path`, { value: p, configurable: true, writable: true });
+      const dirWithFixedPath = dir;
+      Object.defineProperty(dirWithFixedPath, `path`, {
+        value: p,
+        configurable: true,
+        writable: true
+      });
+      return dirWithFixedPath;
     });
   }
   opendirSync(p, opts) {
     const dir = typeof opts !== `undefined` ? this.realFs.opendirSync(npath.fromPortablePath(p), opts) : this.realFs.opendirSync(npath.fromPortablePath(p));
-    return Object.defineProperty(dir, `path`, { value: p, configurable: true, writable: true });
+    const dirWithFixedPath = dir;
+    Object.defineProperty(dirWithFixedPath, `path`, {
+      value: p,
+      configurable: true,
+      writable: true
+    });
+    return dirWithFixedPath;
   }
   async readPromise(fd, buffer, offset = 0, length = 0, position = -1) {
     return await new Promise((resolve, reject) => {
@@ -7360,8 +7391,10 @@ function makeManager(pnpapi, opts) {
   }
   const findApiPathCache = /* @__PURE__ */ new Map();
   function addToCacheAndReturn(start, end, target) {
-    if (target !== null)
+    if (target !== null) {
       target = VirtualFS.resolveVirtual(target);
+      target = opts.fakeFs.realpathSync(target);
+    }
     let curr;
     let next = start;
     do {
