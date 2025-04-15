@@ -18,17 +18,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:1.3.1":
-  version: 1.3.1
-  resolution: "lodash@npm:1.3.1"
-  checksum: e82fd34964e44afac3bfc87023be7e9c9568989eb4ebecf921a2143eb2073a05bb38040e185105d3bed1deb78cebbad19c4510897ba74f4616a7742aa3bd6257
-  languageName: node
-  linkType: hard
-
-"lodash@npm:2.4.1":
-  version: 2.4.1
-  resolution: "lodash@npm:2.4.1"
-  checksum: b4ddafc02fdf4a9f9e1fb47f73477d3d473a83b9764a09ab72cef08204684877d48e65ae57b43ef365ee2cad429827e813da05a920bf8f386c53900a3628718f
+"lodash@npm:4.17.21":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
   languageName: node
   linkType: hard
 
@@ -54,7 +47,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "project-1@workspace:packages/project-1"
   dependencies:
-    lodash: "npm:1.3.1"
+    lodash: "npm:4.17.21"
   languageName: unknown
   linkType: soft
 
@@ -62,7 +55,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "project-2@workspace:packages/project-2"
   dependencies:
-    lodash: "npm:2.4.1"
     react: "npm:^16.14.0"
     yup: "npm:^1.2.0"
   languageName: unknown
