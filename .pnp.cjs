@@ -56,7 +56,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["js-tokens", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/js-tokens-npm-4.0.0-0ac852e9e2-10c0.zip/node_modules/js-tokens/",\
+        "packageLocation": "../../.yarn/berry/cache/js-tokens-npm-4.0.0-0ac852e9e2-10c0.zip/node_modules/js-tokens/",\
         "packageDependencies": [\
           ["js-tokens", "npm:4.0.0"]\
         ],\
@@ -64,24 +64,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lodash", [\
-      ["npm:1.3.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/lodash-npm-1.3.1-1451832054-10c0.zip/node_modules/lodash/",\
+      ["npm:4.17.21", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.17.21-6382451519-10c0.zip/node_modules/lodash/",\
         "packageDependencies": [\
-          ["lodash", "npm:1.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:2.4.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/lodash-npm-2.4.1-e7ac03b240-10c0.zip/node_modules/lodash/",\
-        "packageDependencies": [\
-          ["lodash", "npm:2.4.1"]\
+          ["lodash", "npm:4.17.21"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["loose-envify", [\
       ["npm:1.4.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/loose-envify-npm-1.4.0-6307b72ccf-10c0.zip/node_modules/loose-envify/",\
+        "packageLocation": "../../.yarn/berry/cache/loose-envify-npm-1.4.0-6307b72ccf-10c0.zip/node_modules/loose-envify/",\
         "packageDependencies": [\
           ["loose-envify", "npm:1.4.0"],\
           ["js-tokens", "npm:4.0.0"]\
@@ -91,7 +84,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["object-assign", [\
       ["npm:4.1.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/object-assign-npm-4.1.1-1004ad6dec-10c0.zip/node_modules/object-assign/",\
+        "packageLocation": "../../.yarn/berry/cache/object-assign-npm-4.1.1-1004ad6dec-10c0.zip/node_modules/object-assign/",\
         "packageDependencies": [\
           ["object-assign", "npm:4.1.1"]\
         ],\
@@ -103,7 +96,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/project-1/",\
         "packageDependencies": [\
           ["project-1", "workspace:packages/project-1"],\
-          ["lodash", "npm:1.3.1"]\
+          ["lodash", "npm:4.17.21"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -113,7 +106,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/project-2/",\
         "packageDependencies": [\
           ["project-2", "workspace:packages/project-2"],\
-          ["lodash", "npm:2.4.1"],\
           ["react", "npm:16.14.0"],\
           ["yup", "npm:1.2.0"]\
         ],\
@@ -122,7 +114,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["prop-types", [\
       ["npm:15.8.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/prop-types-npm-15.8.1-17c71ee7ee-10c0.zip/node_modules/prop-types/",\
+        "packageLocation": "../../.yarn/berry/cache/prop-types-npm-15.8.1-17c71ee7ee-10c0.zip/node_modules/prop-types/",\
         "packageDependencies": [\
           ["prop-types", "npm:15.8.1"],\
           ["loose-envify", "npm:1.4.0"],\
@@ -134,7 +126,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["property-expr", [\
       ["npm:2.0.5", {\
-        "packageLocation": "../../../.yarn/berry/cache/property-expr-npm-2.0.5-6f6bda4c65-10c0.zip/node_modules/property-expr/",\
+        "packageLocation": "../../.yarn/berry/cache/property-expr-npm-2.0.5-6f6bda4c65-10c0.zip/node_modules/property-expr/",\
         "packageDependencies": [\
           ["property-expr", "npm:2.0.5"]\
         ],\
@@ -143,7 +135,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["react", [\
       ["npm:16.14.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/react-npm-16.14.0-932446ec69-10c0.zip/node_modules/react/",\
+        "packageLocation": "../../.yarn/berry/cache/react-npm-16.14.0-932446ec69-10c0.zip/node_modules/react/",\
         "packageDependencies": [\
           ["react", "npm:16.14.0"],\
           ["loose-envify", "npm:1.4.0"],\
@@ -155,7 +147,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["react-is", [\
       ["npm:16.13.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/react-is-npm-16.13.1-a9b9382b4f-10c0.zip/node_modules/react-is/",\
+        "packageLocation": "../../.yarn/berry/cache/react-is-npm-16.13.1-a9b9382b4f-10c0.zip/node_modules/react-is/",\
         "packageDependencies": [\
           ["react-is", "npm:16.13.1"]\
         ],\
@@ -164,7 +156,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["tiny-case", [\
       ["npm:1.0.3", {\
-        "packageLocation": "../../../.yarn/berry/cache/tiny-case-npm-1.0.3-8c9747c74e-10c0.zip/node_modules/tiny-case/",\
+        "packageLocation": "../../.yarn/berry/cache/tiny-case-npm-1.0.3-8c9747c74e-10c0.zip/node_modules/tiny-case/",\
         "packageDependencies": [\
           ["tiny-case", "npm:1.0.3"]\
         ],\
@@ -173,7 +165,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["toposort", [\
       ["npm:2.0.2", {\
-        "packageLocation": "../../../.yarn/berry/cache/toposort-npm-2.0.2-d472329c7d-10c0.zip/node_modules/toposort/",\
+        "packageLocation": "../../.yarn/berry/cache/toposort-npm-2.0.2-d472329c7d-10c0.zip/node_modules/toposort/",\
         "packageDependencies": [\
           ["toposort", "npm:2.0.2"]\
         ],\
@@ -182,7 +174,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["type-fest", [\
       ["npm:2.19.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/type-fest-npm-2.19.0-918b953248-10c0.zip/node_modules/type-fest/",\
+        "packageLocation": "../../.yarn/berry/cache/type-fest-npm-2.19.0-918b953248-10c0.zip/node_modules/type-fest/",\
         "packageDependencies": [\
           ["type-fest", "npm:2.19.0"]\
         ],\
@@ -200,7 +192,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["yup", [\
       ["npm:1.2.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/yup-npm-1.2.0-1fa3b3178d-10c0.zip/node_modules/yup/",\
+        "packageLocation": "../../.yarn/berry/cache/yup-npm-1.2.0-1fa3b3178d-10c0.zip/node_modules/yup/",\
         "packageDependencies": [\
           ["yup", "npm:1.2.0"],\
           ["property-expr", "npm:2.0.5"],\
