@@ -64,10 +64,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lodash", [\
-      ["npm:4.17.21", {\
-        "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.17.21-6382451519-10c0.zip/node_modules/lodash/",\
+      ["npm:4.17.23", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.17.23-50bdb1c01a-10c0.zip/node_modules/lodash/",\
         "packageDependencies": [\
-          ["lodash", "npm:4.17.21"]\
+          ["lodash", "npm:4.17.23"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -96,7 +96,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/project-1/",\
         "packageDependencies": [\
           ["project-1", "workspace:packages/project-1"],\
-          ["lodash", "npm:4.17.21"]\
+          ["lodash", "npm:4.17.23"]\
         ],\
         "linkType": "SOFT"\
       }]\
